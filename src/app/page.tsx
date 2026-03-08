@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { ScrollReveal } from "@/components/scroll-reveal";
+
 import {
   Search,
   FileText,
@@ -649,15 +649,15 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ScrollReveal><DemoSection /></ScrollReveal>
-        <ScrollReveal><FeaturesSection /></ScrollReveal>
-        <ScrollReveal><WhySection /></ScrollReveal>
-        <ScrollReveal><TestimonialsSection /></ScrollReveal>
-        <ScrollReveal><PricingSection /></ScrollReveal>
-        <ScrollReveal><FAQSection /></ScrollReveal>
-        <ScrollReveal><CTASection /></ScrollReveal>
+        <DemoSection />
+        <FeaturesSection />
+        <WhySection />
+        <TestimonialsSection />
+        <PricingSection />
+        <FAQSection />
+        <CTASection />
       </main>
-      <ScrollReveal><Footer /></ScrollReveal>
+      <Footer />
     </div>
   );
 }
