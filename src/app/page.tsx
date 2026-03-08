@@ -27,7 +27,7 @@ import {
 /* ─── Logo ─── */
 function Logo({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-bold tracking-tight ${className}`} style={{ fontFamily: "var(--font-heading), sans-serif" }}>
+    <span className={`font-bold tracking-tight ${className}`}>
       <span className="gradient-text">Fir</span>
       <span>matic</span>
     </span>
@@ -331,16 +331,14 @@ function FeaturesSection() {
         </div>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <ScrollReveal key={f.title} delay={i * 0.08}>
-              <div className="card-tilt glass-card group h-full rounded-2xl p-6">
-                <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${f.color}`}>
-                  <f.icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-4 text-base font-bold">{f.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{f.desc}</p>
+          {features.map((f) => (
+            <div key={f.title} className="card-tilt glass-card group h-full rounded-2xl p-6">
+              <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${f.color}`}>
+                <f.icon className="h-5 w-5" />
               </div>
-            </ScrollReveal>
+              <h3 className="mt-4 text-base font-bold">{f.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{f.desc}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -490,9 +488,8 @@ function PricingSection() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {plans.map((plan, i) => (
-            <ScrollReveal key={plan.name} delay={i * 0.1}>
-            <div className={`card-tilt glass-card relative rounded-2xl p-7 ${plan.popular ? "glow-teal ring-2 ring-primary/15" : ""}`}>
+          {plans.map((plan) => (
+            <div key={plan.name} className={`card-tilt glass-card relative rounded-2xl p-7 ${plan.popular ? "glow-teal ring-2 ring-primary/15" : ""}`}>
               {plan.popular && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 text-primary-foreground shadow-md">
                   Recomandat
@@ -520,7 +517,6 @@ function PricingSection() {
                 ))}
               </ul>
             </div>
-            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -553,13 +549,11 @@ function FAQSection() {
         </div>
 
         <div className="mt-12 space-y-4">
-          {faqs.map((faq, i) => (
-            <ScrollReveal key={faq.q} delay={i * 0.08}>
-              <div className="glass-card rounded-2xl p-5">
-                <h3 className="font-bold">{faq.q}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
-              </div>
-            </ScrollReveal>
+          {faqs.map((faq) => (
+            <div key={faq.q} className="glass-card rounded-2xl p-5">
+              <h3 className="font-bold">{faq.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+            </div>
           ))}
         </div>
       </div>
