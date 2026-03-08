@@ -108,7 +108,7 @@ function HeroSection() {
 
       <div className="relative mx-auto max-w-6xl px-4 pt-12 text-center">
         <div className="glass-hero mx-auto max-w-4xl rounded-[2.5rem] px-6 py-14 md:px-14 md:py-18">
-          <div className="animate-fade-up">
+          <div>
             <Badge variant="outline" className="glass rounded-full border-primary/20 px-5 py-2.5 text-primary shadow-sm">
               <Sparkles className="mr-2 h-3.5 w-3.5" />
               Powered by AI — e-Factura integrat
@@ -116,20 +116,20 @@ function HeroSection() {
             </Badge>
           </div>
 
-          <h1 className="animate-fade-up-d1 mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             Verifică firma.
             <br />
             <span className="gradient-text text-glow">Facturează instant.</span>
           </h1>
 
-          <p className="animate-fade-up-d2 mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Platforma care combină{" "}
             <span className="font-semibold text-foreground">verificarea firmelor din ANAF</span>,{" "}
             <span className="font-semibold text-foreground">facturare e-Factura</span> și{" "}
             <span className="font-semibold text-foreground">scor de risc AI</span> — totul într-un singur loc.
           </p>
 
-          <div className="animate-fade-up-d3 mx-auto mt-10 max-w-lg">
+          <div className="mx-auto mt-10 max-w-lg">
             <div className="glass-strong glow-teal flex items-center gap-2 rounded-full p-1.5">
               <div className="relative flex-1">
                 <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-primary/50" />
@@ -152,11 +152,11 @@ function HeroSection() {
         {/* Stats */}
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-4">
           {[
-            { value: "1.2M+", label: "Firme în baza de date", d: "animate-fade-up-d3" },
-            { value: "50K+", label: "Verificări zilnice", d: "animate-fade-up-d4" },
-            { value: "200K+", label: "Facturi trimise", d: "animate-fade-up-d5" },
+            { value: "1.2M+", label: "Firme în baza de date" },
+            { value: "50K+", label: "Verificări zilnice" },
+            { value: "200K+", label: "Facturi trimise" },
           ].map((s) => (
-            <div key={s.label} className={`glass-card flex min-w-[170px] flex-col items-center rounded-2xl px-6 py-4 ${s.d}`}>
+            <div key={s.label} className="glass-card flex min-w-[170px] flex-col items-center rounded-2xl px-6 py-4">
               <span className="text-2xl font-bold gradient-text">{s.value}</span>
               <span className="mt-1 text-xs text-muted-foreground">{s.label}</span>
             </div>
