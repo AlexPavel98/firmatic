@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
+import { Space_Grotesk, Nunito } from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -8,10 +8,10 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const nunito = Nunito({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body
-        className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${nunito.variable} antialiased`}
       >
         {children}
       </body>
